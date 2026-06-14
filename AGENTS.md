@@ -6,6 +6,10 @@ All agents (Windsurf, Claude Code, Codex, and others) MUST read and adhere to th
 
 Please refer to `.agents/README.md` for the central index and routing hub of all specialized instructions.
 
+## Repository Skill (MANDATORY)
+
+This repository ships a platform-specific operating skill in [`SKILLS.md`](SKILLS.md). Before writing or modifying any code in this repository, you MUST read and apply [`SKILLS.md`](SKILLS.md). Its rules govern how code in this repository is built.
+
 ## Git Workflow & Commits (MANDATORY)
 
 - **Before creating any branch**, you MUST read and follow [`.agents/git/workflow.md`](.agents/git/workflow.md). Branch names MUST use the strict `{type}/{primary-noun}` (or `{type}/{primary-noun}-{secondary-noun}`) format. NEVER use a random or auto-generated branch name, and NEVER work directly on `master`.
