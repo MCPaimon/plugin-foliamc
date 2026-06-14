@@ -1,0 +1,22 @@
+name: ${name}
+version: ${version}
+main: io.github.mcpaimon.foliamc.MCAgentsPlugin
+api-version: '1.20'
+author: MCPaimon
+description: A plugin for FoliaMC
+folia-supported: true
+
+commands:
+  mcaiextension:
+    description: Manage MCExtension plugins
+    usage: /mcaiextension <load|unload|reload|list>
+    permission: mcaiextension.admin
+
+permissions:
+  mcaiextension.admin:
+    description: Allows management of MCExtension plugins
+    default: op
+
+libraries:
+  - com.zaxxer:HikariCP:7.0.2
+  - org.mongodb:mongodb-driver-sync:5.7.0

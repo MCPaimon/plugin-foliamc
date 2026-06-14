@@ -1,0 +1,35 @@
+enable: false
+
+license: "free"
+
+token:
+  secret: "secretkey"
+
+# Maximum number of tool iterations per prompt to prevent infinite loops
+max_workflow_iterations: 5
+
+database:
+  type: "sqlite"
+  sqlite:
+    file: "mcagents.db"
+  postgresql:
+    host: "localhost"
+    port: 5432
+    database: "mcagents"
+    username: "postgres"
+    password: "password"
+  mongodb:
+    uri: "mongodb://localhost:27017"
+    database: "mcagents"
+  # Remote central API server (server-expressjs). Used when type is "api".
+  api:
+    url: "http://localhost:3000"
+    token: "your-api-token"
+
+console:
+  platform: "openrouter"
+  model: "deepseek/deepseek-v4-flash"
+  token: "your-console-token"
+
+platforms:
+  - openrouter,https://openrouter.ai/api/v1,deepseek/deepseek-v4-flash
