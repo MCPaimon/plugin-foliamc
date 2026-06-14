@@ -15,5 +15,11 @@
     - `ci/`
     - `chore/`
     - `revert/`
-- **Commit Frequency & Verification**: Commit each change or group related commits. Do not wait for the entire session to finish. Always check the diff before creating a commit.
+- **Commit Frequency & Granularity (STRICT)**: Make ONE commit per logical change. Do NOT bundle an entire multi-step task into a single commit, even when every step shares the same overall goal.
+  - A "logical change" is one self-contained unit of work: a single fix, a single refactor, a single config/build change, or a single doc update.
+  - "Group related commits" means grouping edits that together form ONE logical change (for example, a new method and the import it requires). It does NOT mean combining independent changes into one commit.
+  - When the work spans multiple distinct concerns (for example, a code fix AND a doc update AND a build change), split them into separate commits.
+  - Commit as you go. Do NOT wait until the session or task is finished to create one large commit.
+  - ALWAYS review the diff before committing (`git diff` and `git diff --staged`), and stage only the files that belong to the current logical change. Avoid `git add -A` when it would sweep in unrelated edits.
+  - Rule of thumb: if the commit message needs the word "and" to describe unrelated pieces of work, it should be more than one commit.
 - **Pull Requests (PR)**: PRs must be opened sequentially in the correct order. Always ask the user for permission before creating a PR.
