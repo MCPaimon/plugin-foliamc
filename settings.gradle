@@ -1,0 +1,11 @@
+/*
+ * Standalone single-project build for one MCPaimon module.
+ * https://docs.gradle.org/current/userguide/multi_project_builds.html
+ */
+
+plugins {
+    // Apply the foojay-resolver plugin to allow automatic download of JDKs
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
+rootProject.name = 'mcagents'
