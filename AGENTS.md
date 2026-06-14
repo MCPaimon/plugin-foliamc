@@ -11,4 +11,3 @@ Please refer to `.agents/README.md` for the central index and routing hub of all
 - **Before creating any branch**, you MUST read and follow [`.agents/git/workflow.md`](.agents/git/workflow.md). Branch names MUST use the strict `{type}/{primary-noun}` (or `{type}/{primary-noun}-{secondary-noun}`) format. NEVER use a random or auto-generated branch name, and NEVER work directly on `master`.
 - **Before creating any commit**, you MUST read and follow [`.agents/git/commits.md`](.agents/git/commits.md). Every commit message MUST follow the Conventional Commits specification.
 - **Commit scope**: Do NOT bundle all work into a single commit. Commit each change or group of related changes separately, scoped per the rules above, and verify the diff before committing.
-- **After-merge cleanup**: Once a pull request is merged, you MUST always delete its source branch from the remote repository as well.
